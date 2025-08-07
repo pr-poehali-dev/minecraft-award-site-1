@@ -43,16 +43,7 @@ const Index = () => {
             Ежегодная церемония награждения лучших игроков нашего Minecraft сервера. 
             Время отметить выдающиеся достижения и вклад в развитие игрового сообщества.
           </p>
-          <div className="flex justify-center gap-4 mt-8">
-            <Button className="gold-gradient text-black font-semibold px-8 py-3 text-lg hover:scale-105 transition-transform">
-              <Icon name="Vote" className="mr-2" />
-              Голосовать
-            </Button>
-            <Button variant="outline" className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-3 text-lg">
-              <Icon name="Calendar" className="mr-2" />
-              Расписание
-            </Button>
-          </div>
+
         </div>
       </header>
 
@@ -144,40 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Past Winners Gallery */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 gold-text-gradient">
-              Галерея Победителей
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Почетные чемпионы прошлых лет, навсегда вписанные в историю нашего сервера
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pastWinners.map((winner, index) => (
-              <Card key={index} className="premium-card hover:award-glow transition-all duration-300 text-center">
-                <div className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon name="Crown" size={24} className="text-black" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-yellow-400 mb-2">
-                    {winner.name}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-2">
-                    {winner.category}
-                  </p>
-                  <Badge variant="secondary" className="bg-yellow-400/20 text-yellow-400">
-                    {winner.year}
-                  </Badge>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-black py-12 px-6 border-t border-yellow-400/20">
